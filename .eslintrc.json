@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended"
+  ],
+  "plugins": ["import", "@typescript-eslint", "react", "react-hooks"],
+  "rules": {
+    "@next/next/no-duplicate-head": "off",
+    "@typescript-eslint/consistent-type-imports": [
+      "warn",
+      { "prefer": "type-imports", "fixStyle": "separate-type-imports" }
+    ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      { "checksVoidReturn": { "attributes": false } }
+    ],
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-unnecessary-condition": [
+      "error",
+      { "allowConstantLoopConditions": true }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "import/consistent-type-specifier-style": ["error", "prefer-top-level"]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

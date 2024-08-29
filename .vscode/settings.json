@@ -1,19 +1,28 @@
 {
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "biomejs.biome",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit",
-    "quickfix.biome": "explicit"
+    "source.fixAll.eslint": "explicit"
   },
-
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+  "prettier.ignorePath": ".gitignore",
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
-
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "next/router.d.ts",
+    "next/dist/client/router.d.ts"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
